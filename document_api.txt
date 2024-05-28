@@ -1,0 +1,48 @@
+API Documentation for Testing with Postman
+GET /todos
+
+Description: Retrieve all todos.
+Method: GET
+Endpoint: /todos
+Response:
+Status Code: 200 OK
+Body: {"todos": []}
+POST /todos
+
+Description: Create a new todo.
+Method: POST
+Endpoint: /todos
+Request Body: {"content": "Sample todo", "completed": false}
+Response:
+Status Code: 201 Created
+Body: {"message": "Todo created successfully", "todo_id": 1}
+PUT /todos/{todo_id}
+
+Description: Update an existing todo.
+Method: PUT
+Endpoint: /todos/{todo_id}
+Request Body: {"content": "Updated content", "completed": true}
+Response:
+Status Code: 200 OK
+Body: {"message": "Todo updated successfully"}
+DELETE /todos/{todo_id}
+
+Description: Delete a todo.
+Method: DELETE
+Endpoint: /todos/{todo_id}
+Response:
+Status Code: 200 OK
+Body: {"message": "Todo deleted successfully"}
+By following these instructions, you should be able to run and test your Flask application effectively.
+
+
+
+
+----> to run main server:use the following command:
+        python app.py
+
+----> to create table use the following command:
+    python create_table.py
+
+--->To run the unit tests, use the following command:
+python -m unittest test_app.py
